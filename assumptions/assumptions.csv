@@ -1,0 +1,13 @@
+ID,Name,Value,Unit,Basis,Status
+A-001,DiskSat hex circumradius,0.715,m,Dual-mode note,Active
+A-002,Single DiskSat aperture area,Derived,m^2,A-001,Active
+A-003,Number of combined segments,18,count,Dual-mode note,Branch B
+A-004,System temperature,150,K,Dual-mode note,Active
+A-005,Aperture efficiency,0.65,1,Dual-mode note,Active
+A-006,Baseline receiver center frequency,86,GHz,ASTRA source,Active
+A-007,Example processed bandwidth,8,GHz,Proposed placeholder,Needs review
+A-008,Quantization/correlation efficiency,0.88,1,Proposed placeholder,Needs review
+A-009,Example observing pass,10,h,ASTRA source daily duration,Active
+A-010,Minimum coherence factor,0.90,1,Proposed,Needs review
+A-011,Polarizations,2,count,Proposed,Needs review
+A-012,Quantization,2,bits/sample,Proposed,Needs review
