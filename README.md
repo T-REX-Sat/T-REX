@@ -1,72 +1,57 @@
-# T-REX Mission Concept
+# T-REX
 
-**T-REX (Time-Resolving Explorer)** is a pre-formulation space-VLBI mission concept organized around a reusable Pez spacecraft bus and deployable DiskSat radio telescopes. This repository is the team's digital engineering workspace for science traceability, hardware trades, software prototypes, theory studies, proposal development, and decision control.
+**Time-Resolving Explorer Satellite**
 
-> **Status:** Concept maturation / pre-Phase A. The repository intentionally separates source statements, proposed assumptions, and unresolved issues.
+> Find the scientific nail. Build and test the right hammer.
 
-## Six-month objective
+## Goal
 
-From August 2026 through January 2027, mature T-REX from a compelling narrative into a reviewable mission concept with:
+| Horizon | Goal |
+|---|---|
+| **Fall 2026** | Build one 0.7-meter, 1.42 GHz radio telescope and obtain a calibrated first-light spectrum. |
+| **Long term** | Determine whether a reconfigurable space-VLBI observatory can uniquely time-resolve black holes, binaries, and transients. |
 
-- a controlled reference architecture;
-- a science-to-requirements traceability matrix;
-- reproducible calculations for sensitivity, timing, data volume, resolution, cadence, and orbit trades;
-- an initial hardware breadboard and software analysis pipeline;
-- a defensible SWaP-C and mission-class trade;
-- proposal-ready packages for ASTRA engagement, NIAC technology studies, Flight Opportunities/TechLeap demonstrations, and a Pioneers-to-SMEX mission pathway.
+## Teams
 
-## Source baseline
+| Team | Owners | Fall deliverable |
+|---|---|---|
+| [Hardware](Hardware/) | Graham & Chicha | Operational radio telescope |
+| [Software](Software/) | Mia & Sharanya | Raw SDR data to calibrated spectrum |
+| [Theory](Theory/) | Henry & Neil | Science case, assumptions, and mission trades |
+| [Simulations](Simulations/) | Kaylee & Ahaan | End-to-end synthetic observation and reconstructed image |
 
-The uploaded ASTRA concept describes a time-domain VLBI observatory in which DiskSats deploy from a central Pez bus, observe independently with an 86 GHz receiver chain, store data locally, rendezvous with the Pez, and transfer data for correlation and downlink. It identifies precision timing, pointing, docking, onboard correlation, and deployable reflectors as major design drivers.
+## Fall 2026
 
-A separate dual-mode note describes **18 hexagonal DiskSats** that can either disperse into a long-baseline array or interlock into one larger collecting aperture. These two source documents contain configuration differences that are tracked as open issues rather than silently reconciled.
+| Month | Hardware | Software | Theory | Simulations |
+|---|---|---|---|---|
+| **Sep** | Assemble dish, mount, and base | Recover simulated signals | Identify candidate science cases | Select sky models and generate baselines |
+| **Oct** | Build and test RF chain | Record and replay PlutoSDR data | Convert science cases into requirements | Simulate beam and interferometric coverage |
+| **Nov** | Integrate, point, and calibrate | Automate calibrated spectra | Conduct mission trade studies | Add noise and reconstruct images |
+| **Dec** | First light | Publish first-light spectrum | Select the strongest science case | Deliver final predicted images |
 
-## Repository map
+## Repository
 
-```text
-.
-├── .github/                 # Issue, PR, and review templates
-├── assumptions/             # Controlled assumptions and change log
-├── calculations/            # Reproducible first-order mission calculations
-├── data/                    # Input data (not large binaries)
-├── docs/                    # Strategy, architecture, ConOps, and slide plan
-├── hardware/                # Subsystem work packages and breadboard plans
-├── outputs/                 # Generated tables and figures
-├── proposals/               # Funding/program pathway packages
-├── references/              # Source documents and official program links
-├── requirements/            # Science and system traceability
-├── risks/                   # Risk and opportunity register
-├── scripts/                 # Executable analyses
-├── software/                # Flight/ground software concept documents
-├── src/trex_mission/        # Python analysis package
-├── team/                    # Roles, onboarding, cadence, and student pathways
-├── tests/                   # Unit tests for calculations
-├── theory/                  # Science models and observability studies
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── pyproject.toml
-└── README.md
+| Path | Contents |
+|---|---|
+| [`Hardware/`](Hardware/) | Telescope assembly, RF chain, budget, and verification |
+| [`Software/`](Software/) | Signal generation, SDR recording, spectra, and calibration |
+| [`Simulations/`](Simulations/) | Baselines, synthetic observations, and reconstructed images |
+| [`Theory/`](Theory/) | Science cases, knowns, assumptions, unknowns, and trade studies |
+
+## Workflow
+
+```mermaid
+flowchart TD
+    T["Theory: find the science case"] -->|requirements| S["Simulations: predict observations"]
+    T -->|prototype targets| H["Hardware: build telescope"]
+    H -->|RF and I-Q data| W["Software: produce spectra"]
+    W -->|measured noise| S
+    S -->|feasibility feedback| T
 ```
 
-## Quick start
+## Working rule
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e '.[dev]'
-pytest
-python scripts/run_baseline_trade.py
-```
-
-Generated outputs are written to `outputs/`.
-
-## Team operating rule
-
-Every quantitative claim should point to one of four things:
-
-1. a source document;
-2. a controlled assumption ID;
-3. a reproducible calculation;
-4. an explicitly labeled open issue.
-
-See `docs/06_governance_and_reviews.md` and `CONTRIBUTING.md` before adding work.
+- Start with your team's `README.md`.
+- Produce a measurable result each month.
+- Treat failed assumptions as useful results.
+- Finish the minimum telescope before adding stretch goals.

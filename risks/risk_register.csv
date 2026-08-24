@@ -1,9 +1,0 @@
-ID,Risk,Impact,Likelihood,Owner,Mitigation,Status
-R-001,Sensitivity does not meet 40 mJy/cadence objective,High,High,Theory + Hardware,"Run source-specific sensitivity model; trade aperture, bandwidth, ground baselines, and array combination",Open
-R-002,Timing/coherence cannot be maintained without excessive SWaP-C,High,High,Hardware + Software,"Compare USO, optical/microwave time transfer, fringe fitting, and common-view strategies",Open
-R-003,Raw data volume exceeds storage/downlink capacity,High,High,Software + Hardware,"Trade onboard correlation, channelization, duty cycle, crosslink, and optical downlink",Open
-R-004,Docking/recovery complexity exceeds mission class,High,Medium,Hardware,Define no-docking fallback and staged demonstrations,Open
-R-005,Reflector surface accuracy/thermal stability inadequate,High,Medium,Hardware,"Material coupon, thermal model, photogrammetry/metrology concept",Open
-R-006,Low-thrust transfer radiation and schedule penalties,Medium,Medium,Hardware + Software,Trajectory/radiation trade; compare direct and hybrid transfer,Open
-R-007,Mission cost exceeds Pioneers or SMEX boundary,High,High,Proposal + Systems,Maintain pathfinder and strategic branches; early parametric cost model,Open
-R-008,Architecture changes faster than documents,Medium,High,Systems,Configuration control and monthly reviews,Open
