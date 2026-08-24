@@ -1,6 +1,6 @@
 # T-REX: Time-Resolving Explorer Satellite
 
-> Advance proposal for a modular radio VLBI observatory dedicated to time-domain observations of black holes and mm-wavelength targets.
+> Advance a student-led proposal for a modular radio VLBI observatory dedicated to time-domain observations of black holes and mm-wavelength targets.
 
 ## Goal
 
