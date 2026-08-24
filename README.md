@@ -40,9 +40,12 @@
 
 ```mermaid
 flowchart TD
-    T["Theory: find the science case"] -->|requirements| S["Simulations: predict observations"]
-    T -->|prototype targets| H["Hardware: build telescope"]
-    H -->|RF and I-Q data| W["Software: produce spectra"]
-    W -->|measured noise| S
-    S -->|feasibility feedback| T
+    A["T-REX"] --> N["Near-Term Prototyping"]
+    A --> L["Long-Term Mission Development"]
+
+    N --> H["Hardware: Build radio telescope"]
+    H --> S["Software: Integrate SDR with telescope"]
+
+    L --> T["Theory: Conduct trade studies"]
+    T --> I["Simulations: Produce simulated observations"]
 ```
