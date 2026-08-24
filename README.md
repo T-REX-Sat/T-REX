@@ -1,15 +1,13 @@
-# T-REX
+# T-REX: Time-Resolving Explorer Satellite
 
-**Time-Resolving Explorer Satellite**
-
-> Find the scientific nail. Build and test the right hammer.
+> Advance proposal for a modular radio VLBI observatory dedicated to time-domain observations of black holes and mm-wavelength targets.
 
 ## Goal
 
 | Horizon | Goal |
 |---|---|
 | **Fall 2026** | Build one 0.7-meter, 1.42 GHz radio telescope and obtain a calibrated first-light spectrum. |
-| **Long term** | Determine whether a reconfigurable space-VLBI observatory can uniquely time-resolve black holes, binaries, and transients. |
+| **Spring 2027-2031** | Determine whether a reconfigurable space-VLBI observatory can uniquely time-resolve black holes, binaries, and transients. |
 
 ## Teams
 
@@ -26,8 +24,8 @@
 |---|---|---|---|---|
 | **Sep** | Assemble dish, mount, and base | Recover simulated signals | Identify candidate science cases | Select sky models and generate baselines |
 | **Oct** | Build and test RF chain | Record and replay PlutoSDR data | Convert science cases into requirements | Simulate beam and interferometric coverage |
-| **Nov** | Integrate, point, and calibrate | Automate calibrated spectra | Conduct mission trade studies | Add noise and reconstruct images |
-| **Dec** | First light | Publish first-light spectrum | Select the strongest science case | Deliver final predicted images |
+| **Nov** | Integrate, point, and calibrate | Automate calibrated spectra | Conduct mission trade studies | Simulate _(u,v)_ coverage for different configs |
+| **Dec** | First light | Publish first-light spectrum | Present required trade studies | Deliver final predicted images |
 
 ## Repository
 
@@ -48,10 +46,3 @@ flowchart TD
     W -->|measured noise| S
     S -->|feasibility feedback| T
 ```
-
-## Working rule
-
-- Start with your team's `README.md`.
-- Produce a measurable result each month.
-- Treat failed assumptions as useful results.
-- Finish the minimum telescope before adding stretch goals.
