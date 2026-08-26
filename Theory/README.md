@@ -1,6 +1,6 @@
 # Theory
 
-**Owners:** Henry & Neil
+**Owners:** Henry Tan & Neil
 
 **Goal:** Find the scientific nail before the team optimizes the hammer.
 
