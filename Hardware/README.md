@@ -28,3 +28,5 @@
 - RF-chain and wiring diagram
 - Assembly and calibration checklist
 - First-light hardware report
+
+this is chicha
